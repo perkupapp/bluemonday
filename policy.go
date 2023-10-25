@@ -978,7 +978,6 @@ func (p *Policy) addDefaultSkipElementContent() {
 
 	p.setOfElementsToSkipContent["frame"] = struct{}{}
 	p.setOfElementsToSkipContent["frameset"] = struct{}{}
-	p.setOfElementsToSkipContent["iframe"] = struct{}{}
 	p.setOfElementsToSkipContent["noembed"] = struct{}{}
 	p.setOfElementsToSkipContent["noframes"] = struct{}{}
 	p.setOfElementsToSkipContent["noscript"] = struct{}{}
