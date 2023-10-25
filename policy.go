@@ -248,7 +248,6 @@ func (p *Policy) init() {
 // AllowAttrs() and/or AllowElements() to construct the allowlist of HTML
 // elements and attributes.
 func NewPolicy() *Policy {
-
 	p := Policy{}
 
 	p.addDefaultElementsWithoutAttrs()
@@ -965,6 +964,7 @@ func (p *Policy) addDefaultElementsWithoutAttrs() {
 	p.setOfElementsAllowedWithoutAttrs["var"] = struct{}{}
 	p.setOfElementsAllowedWithoutAttrs["video"] = struct{}{}
 	p.setOfElementsAllowedWithoutAttrs["wbr"] = struct{}{}
+	p.setOfElementsAllowedWithoutAttrs["iframe"] = struct{}{}
 
 }
 

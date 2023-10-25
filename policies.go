@@ -245,7 +245,8 @@ func UGCPolicy() *Policy {
 
 	// Vast majority not permitted
 	// "audio" "canvas" "embed" "iframe" "object" "param" "source" "svg" "track"
-	// "video" are all not permitted
+	// "video" are all not permitted - custom: allow videos with iframe tag
+	p.AllowAttrs("src", "name", "title", "height", "width").OnElements("iframe")
 
 	p.AllowImages()
 
