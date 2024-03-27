@@ -253,8 +253,8 @@ func UGCPolicy() *Policy {
 	return p
 }
 
-// PolicyWithNoMedia same as UGCPolicy but disallows media elements
-func PolicyWithNoMedia() *Policy {
+// ScrapeProductBodyHTMLPolicy same as UGCPolicy but disallows media elements and links
+func ScrapeProductBodyHTMLPolicy() *Policy {
 
 	p := NewPolicy()
 
@@ -342,8 +342,7 @@ func PolicyWithNoMedia() *Policy {
 	// Links //
 	///////////
 
-	// "a" is permitted
-	p.AllowAttrs("href").OnElements("a")
+	// "a" is not permitted (and "href" attribute)
 
 	// "area" is permitted along with the attributes that map image maps work
 	p.AllowAttrs("name").Matching(
